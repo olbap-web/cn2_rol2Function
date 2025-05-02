@@ -24,7 +24,7 @@ public class Function {
      */
     @FunctionName("rol_awe")
     public HttpResponseMessage graphqlHandler(
-        @HttpTrigger(name = "req", methods = {HttpMethod.POST}, authLevel = AuthorizationLevel.ANONYMOUS)
+        @HttpTrigger(name = "req", methods = {HttpMethod.GET, HttpMethod.POST}, authLevel = AuthorizationLevel.ANONYMOUS)
         HttpRequestMessage<Map<String, Object>> request,
         final ExecutionContext context
     ) {
